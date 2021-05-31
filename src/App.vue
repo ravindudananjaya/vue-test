@@ -36,7 +36,6 @@ export default {
       page: 'home',
     }
   },
-  
   components: {
     navigation,
     Home,
