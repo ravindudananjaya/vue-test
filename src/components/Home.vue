@@ -51,9 +51,14 @@
         </template>
       </b-carousel-slide>
     </b-carousel>
-       <div class="welcome-text">Welcome</div>
-
-    
+    <div  @click="openInfo" class="get-to-know">
+      <div class="get-to-know__text">Get to Know Us</div>
+    </div>
+    <div v-if="info === true" class="info">
+      <div class="info_box">
+        <button  @click="closeInfo">X</button>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -61,23 +66,21 @@
 
 export default {
   name: 'Home',
-  props: {
-    msg: String
+  data() {
+    return {
+      info: '',
+    }
   },
-  // data() {
-  //     return {
-  //       slide: 0,
-  //       sliding: null
-  //     }
-  //   },
-  //   methods: {
-  //     onSlideStart() {
-  //       this.sliding = true
-  //     },
-  //     onSlideEnd() {
-  //       this.sliding = false
-  //     }
-  //   }
+  methods: {
+    openInfo () {
+       this.info = true;
+       console.log(this.info)
+    },
+    closeInfo () {
+       this.info = false;
+       console.log(this.info)
+    }
+  }
 }
 </script>
 
