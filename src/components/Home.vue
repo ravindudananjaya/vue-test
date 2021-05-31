@@ -1,7 +1,5 @@
 <template>
     <div>
-       <!-- <h1 class="display-3 welcome-text text-center">Welcome</h1> -->
-       <div class="welcome-text">Welcome</div>
     <b-carousel
       id="carousel-1"
       v-model="slide"
@@ -18,33 +16,42 @@
     >
       <!-- Text slides with image -->
       <b-carousel-slide
-        caption="First slide"
-        text="Nulla vitae elit libero, a pharetra augue mollis interdum."
-        img-src="https://images.wallpaperscraft.com/image/rollsroyce_front_view_headlights_136993_1280x800.jpg"
+        caption="Welcome"
+        text="“Taking an image, freezing a moment, reveals how rich reality truly is.” "
+        img-src="https://images.unsplash.com/photo-1542300058-849d3b08aa0f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1936&q=80"
       ></b-carousel-slide>
 
       <!-- Slides with custom text -->
-      <b-carousel-slide img-src="https://images.wallpaperscraft.com/image/bmw_e34_red_cars_side_view_sports_96487_1280x800.jpg">
-        <h1>Hello world!</h1>
+      <b-carousel-slide 
+      caption="Welcome"
+        text="“Taking an image, freezing a moment, reveals how rich reality truly is.” "
+      img-src="https://images.unsplash.com/photo-1542293787938-c9e299b880cc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1950&q=80">
       </b-carousel-slide>
 
       <!-- Slides with image only -->
-      <b-carousel-slide img-src="https://images.wallpaperscraft.com/image/car_sportscar_red_148269_1280x800.jpg"></b-carousel-slide>
+      <b-carousel-slide
+      caption="Welcome"
+        text="“Taking an image, freezing a moment, reveals how rich reality truly is.” "
+      img-src="https://images.unsplash.com/photo-1542300058-b94b8ab7411b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1934&q=80">
+      </b-carousel-slide>
 
       <!-- Slides with img slot -->
       <!-- Note the classes .d-block and .img-fluid to prevent browser default image alignment -->
-      <b-carousel-slide>
+      <b-carousel-slide
+      caption="Welcome"
+        text="“Taking an image, freezing a moment, reveals how rich reality truly is.” ">
         <template v-slot:img>
           <img
             class="d-block img-fluid w-100"
             width="1024"
             height="480"
-            src="https://images.wallpaperscraft.com/image/mercedes_gelandewagen_g63_brabus_black_g_tuning_2013_2014_suv_jeep_b63_4x4_hd_6k_93020_1280x800.jpg"
+            src="https://images.unsplash.com/photo-1542395975-d6d3ddf91d6e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1950&q=80"
             alt="image slot"
           >
         </template>
       </b-carousel-slide>
     </b-carousel>
+       <div class="welcome-text">Welcome</div>
 
     
   </div>

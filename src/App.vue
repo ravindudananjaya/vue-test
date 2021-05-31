@@ -8,6 +8,7 @@
 
 
     <div class="page-content">
+      <transition name="component-fade" mode="out-in">
         <Home
         v-if="page === 'home'" />
         <WorkDone
@@ -16,6 +17,7 @@
         v-if="page === 'details'" />
         <ContactUs
         v-if="page === 'contactus'" />
+      </transition>
     </div>
   </div>
 </template>
@@ -52,4 +54,10 @@ export default {
 </script>
 
 <style>
+.component-fade-enter-active, .component-fade-leave-active {
+  transition: opacity .3s ease;
+}
+.component-fade-enter, .component-fade-leave-to{
+  opacity: 0;
+}
 </style>

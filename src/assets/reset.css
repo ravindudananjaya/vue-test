@@ -35,20 +35,35 @@ height: 100%;
 color: white;
 }
 
-  
+ 
+/* SCROLL BAR PAGE */
+    ::-webkit-scrollbar {
+    width: 10px;
+    }
+    ::-webkit-scrollbar-track {
+    background: #000000; 
+    border-radius: 10px;
+    }
+    ::-webkit-scrollbar-thumb {
+    background: #888; 
+    border-radius: 10px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+    }
 
 /* bootstrap navbar */
     .navbar {
         padding: 0 20px;
-    }
-    .bg-dark {
-        animation-name: welcome-nav;
-        animation-duration: 4s;
+        height: 50px;
     }
     .nav-link:focus-visible {
         color: red !important;
     }
-
+    #navbarNav {
+        flex-flow: row-reverse;
+    }
+    
 /* bootstrap slider */
     #carousel-1 .sr-only {
         display: none;
@@ -59,6 +74,10 @@ color: white;
     }
     .carousel {
         box-shadow: 0px 0px 20px 20px #121417;
+    }
+    .carousel-caption h3,
+    .carousel-caption p {
+        font-weight: 300;
     }
 
 /* bootstrap buttons navigation */
@@ -89,24 +108,13 @@ color: white;
 /* ANIMATIONS */
     @keyframes welcome-text {
         0%   {color:rgb(255, 255, 255);}
-        /* 25%  {color:rgb(142, 142, 142);} */
-        50%  {color:rgb(0, 0, 0); text-shadow: 0 0 18px rgb(245, 245, 245);} 
-        /* 75%  {color:rgb(94, 94, 94);} */
+        50%  {color:rgb(255, 255, 255); text-shadow: 0 0 18px rgb(255, 255, 255);} 
         100% {color:rgb(255, 255, 255);}
     }
     @keyframes welcome-body {
-        0%   {background-color:#ffffff;}
-        /* 25%  {color:rgb(142, 142, 142);} */
-        50%  {background-color:rgb(0, 0, 0); text-shadow: 0 0 18px black;} 
-        /* 75%  {color:rgb(94, 94, 94);} */
-        100% {color:rgb(0, 0, 0);}
-    }
-    @keyframes welcome-nav {
-        0%   {background-color:#ffffff;}
-        /* 25%  {color:rgb(142, 142, 142);} */
-        50%  {background-color:rgb(0, 0, 0); text-shadow: 0 0 18px black;} 
-        /* 75%  {color:rgb(94, 94, 94);} */
-        100% {color:rgb(0, 0, 0);}
+        0%   {background-color:#212529;}
+        50%  {background-color:rgb(42, 42, 42);}
+        100% {background-color:#212529;}
     }
       
     
