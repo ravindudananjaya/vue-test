@@ -24,18 +24,19 @@ body {
    z-index: 999;
 }
 
-
+.get-to-know {
+}
 .get-to-know__text {
-text-align: center;
-animation-name: get-to-know__text-anim;
-animation-duration: 4s;
-font-size: 72px;
-font-weight: 100;
-width: 100%;
-height: 100%;
-color: white;
-margin-top: 90px;
-transition: 0.3s;
+    text-align: center;
+    animation-name: get-to-know__text-anim;
+    animation-duration: 4s;
+    font-size: 72px;
+    font-weight: 100;
+    width: 100%;
+    height: 100%;
+    color: white;
+    margin-top: 60px;
+    transition: 0.3s;
 }
 .get-to-know:hover .get-to-know__text {
     color: black;
@@ -87,13 +88,26 @@ transition: 0.3s;
         padding: 0 20px;
         height: 50px;
     }
-    .nav-link:focus-visible {
-        color: red !important;
+    .nav-btn {
+        text-decoration: none;
+        color: #fff8fa;
+        transition: 0.3s;
+    }
+    .nav-btn:hover {
+        color: #5fa5b5;
+        transition: 0.3s;
+    }
+    .router-link-active {
+        color: #75c7da;
+        transition: 0.3s;
     }
     #navbarNav {
         flex-flow: row-reverse;
     }
-    
+    .navbar-brand {
+        color: #5fa5b5;
+        text-shadow: 0 0 18px #0dcaf;
+    }
 /* bootstrap slider */
     #carousel-1 .sr-only {
         display: none;
@@ -101,9 +115,11 @@ transition: 0.3s;
     #carousel-1 img {
         object-fit: cover;
         height: 408px;
+        filter: brightness(0.5);
     }
     .carousel {
-        box-shadow: 0px 20px 20px 2px #121417;
+        box-shadow: 0px 0px 20px 2px #121417;
+        margin-top: 60px;
     }
     .carousel-caption h3,
     .carousel-caption p {

@@ -55,7 +55,7 @@
       <div class="get-to-know__text">Get to Know Us</div>
     </div>
     <div v-if="info === true" class="info">
-      <div class="info_box">
+      <div class="info_box" :class="{'4me': btnClass}">
         <button  @click="closeInfo">X</button>
       </div>
     </div>
@@ -69,6 +69,7 @@ export default {
   data() {
     return {
       info: '',
+      btnClass: true
     }
   },
   methods: {
@@ -87,3 +88,4 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 </style>
+  
