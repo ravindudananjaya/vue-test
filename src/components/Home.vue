@@ -1,6 +1,7 @@
 <template>
     <div>
-       <h1 class="display-3 text-center">Welcome</h1>
+       <!-- <h1 class="display-3 welcome-text text-center">Welcome</h1> -->
+       <div class="welcome-text">Welcome</div>
     <b-carousel
       id="carousel-1"
       v-model="slide"

@@ -1,6 +1,6 @@
 <template>
     <div>
-      <h1 class="display-1">WorkDone</h1>
+      <h1 class="display-1">Details</h1>
     
   </div>
 </template>
@@ -8,7 +8,7 @@
 <script>
 
 export default {
-  name: 'Work-done',
+  name: 'Details',
   props: {
     msg: String
   }
