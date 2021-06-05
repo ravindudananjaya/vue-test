@@ -53,12 +53,15 @@
     </b-carousel>
     <div  @click="openInfo" class="get-to-know">
       <div class="get-to-know__text">Get to Know Us</div>
+      <div class="link-hover-animation"></div>
     </div>
-    <div v-if="info === true" class="info">
-      <div class="info_box" :class="{'4me': btnClass}">
-        <button  @click="closeInfo">X</button>
+    <transition name="slide-fade">
+      <div v-if="info === true" class="info">
+        <div class="info_box" :class="{'4me': btnClass}">
+          <button  @click="closeInfo">X</button>
+        </div>
       </div>
-    </div>
+    </transition>
   </div>
 </template>
 
@@ -85,7 +88,16 @@ export default {
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style>
+.slide-fade-enter-active {
+  transition: all .4s ease;
+}
+.slide-fade-leave-active {
+  transition: all .4s ease;
+}
+.slide-fade-enter, .slide-fade-leave-to{
+  transform: translateY(100%);
+  opacity: 0;
+}
 </style>
   
