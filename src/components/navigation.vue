@@ -1,7 +1,7 @@
 <template>
 <div>
   
-  <transition name="navbar-fade" mode="out-in">
+  <transition name="slide-fade">
 
   <nav v-if="navbarCollapse === false"  :class="componentClasses" class="navbar navbar-expand-lg navbar-light bg-dark">
         <a class="navbar-brand">Brand Name</a>
@@ -11,7 +11,7 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link "><router-link class="nav-btn" to="/home">Home</router-link> </a>
+            <a class="nav-link "><router-link class="nav-btn" to="/">Home</router-link> </a>
             <div class="link-hover-animation"></div>
           </li>
           <li class="nav-item">
@@ -31,7 +31,7 @@
   </nav>
 
   <div class="navbar-collapsed" v-if="navbarCollapse === true">
-    <svg @click="navbarCollapse = false" width="35px" height="35px" id="Layer_1" x="0px" y="0px" viewBox="0 0 297.001 297.001" style="enable-background:new 0 0 297.001 297.001;" xml:space="preserve">
+    <svg class="navbar-collapsed__svg" @click="scrollToTop()" width="35px" height="35px" id="Layer_1" x="0px" y="0px" viewBox="0 0 297.001 297.001" style="enable-background:new 0 0 297.001 297.001;" xml:space="preserve">
     <g>
       <g>
         <g>
@@ -83,7 +83,7 @@
 <script>
 export default {
   name: 'navigation',
-    data() {
+  data() {
     return {
       windowTop: 0,
       navbarCollapse: false
@@ -105,16 +105,13 @@ export default {
         this.navbarCollapse = false
       }
       console.log(this.navbarCollapse)
+    },
+    scrollToTop() {
+      window.scrollTo(0, 0);
     }
   }
 }
 </script>
 
 <style >
-.navbar-fade-enter-active, .navbar-fade-leave-active {
-  transition: opacity .2s ease;
-}
-.navbar-fade-enter, .navbar-fade-leave-to{
-  opacity: 0;
-}
 </style>

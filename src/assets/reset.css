@@ -1,6 +1,10 @@
+html {
+  overflow-y: overlay;
+}
+
 body {
-  background-color: white;
-  color: black;
+  background-color: #212529;
+  color: white;
 }
 
 .logo {
@@ -22,7 +26,7 @@ body {
 }
 
 .link-hover-animation {
-  background-color: black;
+  background-color: white;
   width: 0%;
   height: 1px;
   -webkit-transition: 0.3s;
@@ -42,7 +46,6 @@ body {
   font-weight: 100;
   width: 100%;
   height: 100%;
-  color: black;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
@@ -83,17 +86,18 @@ body {
 }
 
 ::-webkit-scrollbar {
-  width: 10px;
-  position: absolute;
+  width: 5px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  background-color: rgba(0, 0, 0, 0);
 }
 
 ::-webkit-scrollbar-track {
-  background: #000000;
   border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #888;
+  background: #5fa5b58b;
   border-radius: 10px;
 }
 
@@ -104,8 +108,8 @@ body {
 .navbar {
   padding: 0 20px;
   height: 50px;
-  position: relative;
   position: fixed;
+  bottom: 0;
   width: 100%;
   -webkit-box-shadow: 0px 6px 20px 0px #121417;
           box-shadow: 0px 6px 20px 0px #121417;
@@ -166,17 +170,22 @@ body {
 
 .navbar-collapsed {
   position: fixed;
-  top: 3%;
+  bottom: 3%;
   right: 3%;
   z-index: 999;
 }
 
-.navbar-collapsed svg {
+.navbar-collapsed__svg path {
+  fill: #75c7da;
   z-index: 999;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
-.page-content {
-  padding-top: 50px;
+.navbar-collapsed:hover .navbar-collapsed__svg path {
+  fill: #feffff;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 #carousel-1 .sr-only {
@@ -192,7 +201,9 @@ body {
 }
 
 .carousel {
-  margin-top: 60px;
+  margin-bottom: 70px;
+  -webkit-box-shadow: 0px 6px 20px 0px #121417;
+          box-shadow: 0px 6px 20px 0px #121417;
 }
 
 .carousel-caption h3 {
@@ -288,27 +299,21 @@ body {
 
 @-webkit-keyframes get-to-know__text-anim {
   0% {
-    color: rgba(0, 0, 0, 0);
   }
   50% {
-    color: rgba(0, 0, 0, 0.497);
-    text-shadow: 0 0 18px black;
+    text-shadow: 0 0 18px white;
   }
   100% {
-    color: black;
   }
 }
 
 @keyframes get-to-know__text-anim {
   0% {
-    color: rgba(0, 0, 0, 0);
   }
   50% {
-    color: rgba(0, 0, 0, 0.497);
-    text-shadow: 0 0 18px black;
+    text-shadow: 0 0 18px white;
   }
   100% {
-    color: black;
   }
 }
 /*# sourceMappingURL=reset.css.map */

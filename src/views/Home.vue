@@ -51,10 +51,12 @@
         </template>
       </b-carousel-slide>
     </b-carousel>
+    
     <div  @click="openInfo" class="get-to-know">
       <div class="get-to-know__text">Get to Know Us</div>
       <div class="link-hover-animation"></div>
     </div>
+
     <transition name="slide-fade">
       <div v-if="info === true" class="info">
         <div class="info_box" :class="{'4me': btnClass}">
